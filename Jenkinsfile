@@ -6,7 +6,7 @@ tasks["cloud"] = {
         def nativeImage = buildSimpleDocker_v2(dockerfileDir: 'cloud-computing',
                 dockerImageRepositoryName: 'offchain-tee-kaiko-pricefeed', imageprivacy: 'public')
         sconeBuildAllTee(nativeImage: nativeImage, targetImageRepositoryName: 'offchain-tee-kaiko-pricefeed',
-                sconifyArgsPath: 'cloud-computing/sconify.args')
+                sconifyArgsPath: 'offchain-computing/sconify.args')
     }
 }
 parallel tasks
