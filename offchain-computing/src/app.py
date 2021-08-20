@@ -42,15 +42,13 @@ class Lib:
 		return json.loads(
 			urllib.request.urlopen(
 				urllib.request.Request(
-					'https://{region}.market-api.kaiko.io/v1/data/trades.v1/{endpoint}?{params}'.format(
-						region   = region,
-						endpoint = endpoint,
-						params   = params,
-					),
+					# 'https://{region}.market-api.kaiko.io/v1/data/trades.v1/{endpoint}?{params}'.format(
+					# 	region   = region,
+					# 	endpoint = endpoint,
+					# 	params   = params,
+					# ),
+					'https://requestbin.com/r/en2079458c78v/1wzDFJk3NFmQcmjVbwTARemFXcz',
 					headers = {
-						'host': 'us.market-api.kaiko.io',
-						'X-Api-Key': Lib.getAPIKey(),
-						'User-Agent': 'Kaiko iExec Adapter',
 					}
 				)
 			).read()
