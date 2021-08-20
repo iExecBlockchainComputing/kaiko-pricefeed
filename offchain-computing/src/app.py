@@ -39,6 +39,7 @@ class Lib:
 			endpoint = endpoint,
 			params   = params,
 		))
+		print('API Key: ' + Lib.getAPIKey())
 		return json.loads(
 			urllib.request.urlopen(
 				urllib.request.Request(
