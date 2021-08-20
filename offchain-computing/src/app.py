@@ -48,6 +48,7 @@ class Lib:
 						params   = params,
 					),
 					headers = {
+						'host': 'us.market-api.kaiko.io',
 						'X-Api-Key': Lib.getAPIKey(),
 						'User-Agent': 'Kaiko iExec Adapter',
 					}
