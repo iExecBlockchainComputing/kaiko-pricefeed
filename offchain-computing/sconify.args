@@ -3,6 +3,8 @@
 --to=${IMG_TO} \
 --binary-fs \
 --fs-dir=/app \
+--host-path=/etc/hosts \
+--host-path=/etc/resolv.conf \
 --host-path=/etc/ssl/certs/ \
 --binary="/usr/local/bin/python3.7" \
 --heap=1G \
