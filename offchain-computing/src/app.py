@@ -39,7 +39,6 @@ class Lib:
 			endpoint = endpoint,
 			params   = params,
 		))
-		context = ssl.SSLContext()
 		return json.loads(
 			urllib.request.urlopen(
 				urllib.request.Request(
