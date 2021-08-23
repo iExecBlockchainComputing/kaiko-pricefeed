@@ -5,7 +5,7 @@
 --fs-dir=/app \
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
---host-path=/etc/ssl/certs/ \
+--host-path=/usr/local/lib/python3.7/site-packages/certifi/cacert.pem \
 --binary=/usr/local/bin/python3.7 \
 --heap=1G \
 --dlopen=2 \
