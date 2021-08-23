@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import urllib.request
+import ssl
 
 iexec_out = os.environ['IEXEC_OUT']
 iexec_in = os.environ['IEXEC_IN']
@@ -35,6 +36,7 @@ class Lib:
 	@staticmethod
 	def fetchMarketData(region, endpoint, params):
 		print('Request https://requestbin.com/r/en2079458c78v/1wzDFJk3NFmQcmjVbwTARemFXcz')
+		context = ssl.SSLContext()
 		return json.loads(
 			urllib.request.urlopen(
 				urllib.request.Request(
@@ -46,7 +48,8 @@ class Lib:
 					'https://requestbin.com/r/en2079458c78v/1wzDFJk3NFmQcmjVbwTARemFXcz',
 					headers = {
 					}
-				)
+				),
+				context=context
 			).read()
 		)
 
