@@ -4,7 +4,6 @@ import os
 import re
 import sys
 import urllib.request
-import ssl
 
 iexec_out = os.environ['IEXEC_OUT']
 iexec_in = os.environ['IEXEC_IN']
@@ -53,8 +52,7 @@ class Lib:
 						'X-Api-Key': Lib.getAPIKey(),
 						'User-Agent': 'Kaiko iExec Adapter',
 					}
-				),
-				context=context
+				)
 			).read()
 		)
 

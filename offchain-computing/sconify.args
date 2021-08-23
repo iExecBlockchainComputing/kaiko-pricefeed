@@ -3,6 +3,7 @@
 --to=${IMG_TO} \
 --binary-fs \
 --fs-dir=/app \
+--fs-dir=/etc/ssl/certs \
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
 --binary=/usr/local/bin/python3.7 \
