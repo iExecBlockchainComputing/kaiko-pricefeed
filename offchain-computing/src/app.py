@@ -35,18 +35,23 @@ class Lib:
 
 	@staticmethod
 	def fetchMarketData(region, endpoint, params):
-		print('Request https://requestbin.com/r/en2079458c78v/1wzDFJk3NFmQcmjVbwTARemFXcz')
+		print('Request https://{region}.market-api.kaiko.io/v1/data/trades.v1/{endpoint}?{params}'.format(
+			region   = region,
+			endpoint = endpoint,
+			params   = params,
+		))
 		context = ssl.SSLContext()
 		return json.loads(
 			urllib.request.urlopen(
 				urllib.request.Request(
-					# 'https://{region}.market-api.kaiko.io/v1/data/trades.v1/{endpoint}?{params}'.format(
-					# 	region   = region,
-					# 	endpoint = endpoint,
-					# 	params   = params,
-					# ),
-					'https://requestbin.com/r/en2079458c78v/1wzDFJk3NFmQcmjVbwTARemFXcz',
+					'https://{region}.market-api.kaiko.io/v1/data/trades.v1/{endpoint}?{params}'.format(
+						region   = region,
+						endpoint = endpoint,
+						params   = params,
+					),
 					headers = {
+						'X-Api-Key': Lib.getAPIKey(),
+						'User-Agent': 'Kaiko iExec Adapter',
 					}
 				),
 				context=context
