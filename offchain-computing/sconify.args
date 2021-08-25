@@ -3,11 +3,13 @@
 --to=${IMG_TO} \
 --binary-fs \
 --fs-dir=/app \
+--fs-dir=/etc/ssl/certs \
+--fs-dir=/usr/share/ca-certificates \
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
---binary="/usr/local/bin/python3.7" \
---heap="1G" \
---dlopen="2" \
+--binary=/usr/local/bin/python3.7 \
+--heap=1G \
+--dlopen=2 \
 --no-color \
 --verbose \
 --command="python3 /app/app.py"
